@@ -4,8 +4,10 @@ var fs        = require("fs");
 var path      = require("path");
 var Sequelize = require("sequelize");
 var env       = process.env.NODE_ENV || "development";
-var config    = require(__dirname + '/../config/config.json')[env];
-var sequelize = new Sequelize(config.database, config.username, config.password, config);
+
+var config = require('../config/environment/common').config();
+var sequelize = new Sequelize(config.postgres.database, config.postgres.username, config.postgres.password, config.postgres);
+
 var db        = {};
 
 fs
