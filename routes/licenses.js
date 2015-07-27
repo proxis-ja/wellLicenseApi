@@ -17,16 +17,6 @@ router.post('/create', function(req, res) {
   });
 });
 
-router.post('/:user_id/tasks/create', function (req, res) {
-  models.License.create({
-    //title: req.param('title'),
-    //UserId: req.param('user_id')
-  }).then(function() {
-    res.redirect('/');
-  });
-});
-
-
 function getLicense(req, res, next){
   models.License.findOne({
     where: {licenseId: req.params.licenseID}

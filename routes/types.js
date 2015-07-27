@@ -14,7 +14,6 @@ router.post('/create', function(req, res) {
 router.get('/view', function(req, res) {
   models.Type.findAll({
   }).then(function(types) {
-    // console.log(status);
    res.json(types);
   });
 });
