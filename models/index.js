@@ -9,7 +9,7 @@ var config = require('../config/environment/common').config();
 var sequelize = null;
 
 if(process.env.DATABASE_URL){
-  sequelize = new Sequelize(process.env.DATABASE_URL, config.postgres.username, config.postgres.password,{
+  sequelize = new Sequelize(config.postgres.database, config.postgres.username, config.postgres.password,{
     host :config.postgres.host,
     port : config.postgres.port,
     dialect: 'postgres',
