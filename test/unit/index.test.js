@@ -3,13 +3,18 @@
 var expect = require('expect.js');
 
 describe('models/index', function () {
-  it('returns the task model', function () {
+  it('returns the license model', function () {
     var models = require('../../models');
-    expect(models.Task).to.be.ok();
+    expect(models.License).to.be.ok();
   });
 
-  it('returns the user model', function () {
+  it('returns the status model', function () {
     var models = require('../../models');
-    expect(models.User).to.be.ok();
+    expect(models.Status).to.be.ok();
+  });
+
+  it('returns the type model', function () {
+    var models = require('../../models');
+    expect(models.Type).to.be.ok();
   });
 });
